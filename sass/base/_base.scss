@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 10px is 62.5% of 16px which is the browser default */
+  /* by setting root font to 10px now we can convert absolute px to rem based on rule 1rem = 1 unit of root font-size */
+  font-size: 62.5%;
+
+  // when we work from big to small breakpoint so is order of code must be from big to small
+  @include respond(tab-land) {
+    //screen width < 1200px
+    font-size: 56.25%; // 1 rem = 9px , 9/16 = 56.25%
+  }
+  @include respond(tab-port) {
+    //screen width < 900px
+    font-size: 50%; // 1 rem = 8px , 8/16 = 50%
+  }
+  @include respond(big-desk) {
+    //screen width > 1800px
+    font-size: 75%; // 1 rem = 12px , 12/16 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: black;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
