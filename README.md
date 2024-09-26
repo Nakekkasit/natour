@@ -1,4 +1,4 @@
-## Natour(a fully responsive tourism website) with HTML, Sass
+## Natours (a fully responsive tourism website) with HTML, Sass
 ## Deployed App : 👉 [natours](https://natours-complete.netlify.app/)
 ### 🏛 Project Requirements:
 ### 1. Interactive Design
